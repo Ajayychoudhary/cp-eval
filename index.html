@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+      #container{
+        width: 95%;
+        height: 90vh;
+        border: 2px ;
+        display: grid;
+        gap: 2%;
+        grid-template-areas: "a1 a2 a3"
+                             "a4 a5 a5";
+
+      }
+     
+      #container>div:nth-child(1){
+        grid-area: a1;
+        background-image: url(https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*);
+        background-position: center;
+        background-size: cover;
+      }
+      #container>div:nth-child(2){
+        grid-area: a2;
+        background-image: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      #container>div:nth-child(3){
+        grid-area: a3;
+        background-image: url(https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445);
+        background-position: center;
+        background-size: cover;
+      }
+      #container>div:nth-child(4){
+        grid-area: a4;
+        background-image: url(https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/gettyimages-530330473.jpg?crop=0.659xw:0.990xh;0.123xw,0.00779xh&resize=980:*);
+        
+        background-size: cover;
+        
+      }#container>div:nth-child(5){
+        grid-area: a5;
+        background-image: url(https://image.petmd.com/files/styles/978x550/public/dog-allergies.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      @media (max-width: 900px) {
+        #container{
+          grid-template-areas:"a5 a4 a3 a1"
+                              "a2 a2 . a1"
+                              "a2 a2 . a1" ;
+        }
+      }
+      @media (max-width: 470px) {
+        #container{
+          grid-template-areas: "a5 a4 a3 a1"
+                               "a2 a2 . a1"
+                               "a2 a2 . a1" ;
+        }
+      }
+      @media (max-width: 350px){
+        #container>div:nth-child(1){
+          grid-area: a1;
+          background-image: none;
+          background-color: purple;
+        }
+        #container>div:nth-child(3){
+          grid-area: a3;
+          background-image: none;
+          background-color: purple;
+        }
+        #container>div:nth-child(5){
+          grid-area: a5;
+          background-image: none;
+          background-color: purple;
+        }
+        #container{
+          grid-template-areas: "a1 a4 a4 a5"
+                               "a3 . . a5"
+                               "a3 a2 a2 a5" ;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <!-- create div's here -->
+      <div>
+        
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
